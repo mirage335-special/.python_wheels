@@ -1,0 +1,11 @@
+
+Uniquely, submodules of 'ubiquitous_bash', which this repository may or may not be, use HTTPS rather than SSH origin URL, due to possible of absence of availability of '_gitBest' function.
+
+git remote add origin-ssh git@github.com:mirage335-special/.msw_python_wheels.git
+git push origin-ssh
+git pull
+git status
+git remote show origin-ssh
+
+
+
