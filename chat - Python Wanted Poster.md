@@ -1,7 +1,8 @@
+# USER
+ASCII art for a python mugshot in jail or wanted poster. Criminal offenses include deprecation of upstream dependencies, indentation errors, multiple offenses of syntax. Last seen in a loop. Dangerous if not indented.
 
-Essential (usually tiny) python wheels and/or the means to download them (eg. from GitHub releases, ingredients, etc).
-
-
+## ASSISTANT - Llama 3.1 Nemotron Ultra 253b v1
+Here's a ASCII art for a Python mugshot in a jail/wanted poster style, incorporating the requested details:
 
 ```
 **************************************
@@ -49,7 +50,4 @@ Essential (usually tiny) python wheels and/or the means to download them (eg. fr
 **CORRECTION AND SUCCESSFUL EXECUTION**
 ```
 
-
-
-
-
+Feel free to adjust or add details as you see fit!
