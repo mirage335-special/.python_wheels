@@ -1719,8 +1719,11 @@ true
 
 
 _get() {
-	lib_dir_msw_python_wheels="$scriptAbsoluteFolder"
-	lib_dir_msw_python_wheels_msw=$(cygpath -w "$lib_dir_msw_python_wheels")
+	export lib_dir_msw_python_wheels="$scriptAbsoluteFolder"
+	export lib_dir_msw_python_wheels_msw="$scriptAbsoluteFolder"
+	type cygpath > /dev/null 2>&1 && export lib_dir_msw_python_wheels_msw=$(cygpath -w "$lib_dir_msw_python_wheels")
+
+	# WARNING: May default to Cygwin built-in python/pip .
 	if [[ "$_PATH_pythonDir" != "" ]]
 	then
 		export lib_dir_msw_python_wheels_relevant="$lib_dir_msw_python_wheels_msw"
