@@ -9,13 +9,15 @@ _get-specific_nix_python_wheels() {
 	do
 		_messagePlain_probe '_get-specific_nix_python_wheels: '3."$currentVersion_minor"
 
-		"$1"pip download "$3" --platform win_amd64 --python-version 3."$currentVersion_minor" --no-deps --dest "$lib_dir_nix_python_wheels" > /dev/null >&2
-		"$1"pip download "$3" --platform win32 --python-version 3."$currentVersion_minor" --no-deps --dest "$lib_dir_nix_python_wheels" > /dev/null >&2
-		"$1"pip download "$3" --platform win_arm64 --python-version 3."$currentVersion_minor" --no-deps --dest "$lib_dir_nix_python_wheels" > /dev/null >&2
+		"$1"pip download "$3" --platform linux_x86_64 --python-version 3."$currentVersion_minor" --no-deps --dest "$lib_dir_nix_python_wheels" > /dev/null >&2
+		"$1"pip download "$3" --platform manylinux2014_x86_64 --python-version 3."$currentVersion_minor" --no-deps --dest "$lib_dir_nix_python_wheels" > /dev/null >&2
+		"$1"pip download "$3" --platform manylinux1 --python-version 3."$currentVersion_minor" --no-deps --dest "$lib_dir_nix_python_wheels" > /dev/null >&2
+		"$1"pip download "$3" --platform any --python-version 3."$currentVersion_minor" --no-deps --dest "$lib_dir_nix_python_wheels" > /dev/null >&2
 
-		"$1"pip download "$3" --platform win_amd64 --python-version 3."$currentVersion_minor" --only-binary=:all: --dest "$lib_dir_nix_python_wheels" > /dev/null >&2
-		"$1"pip download "$3" --platform win32 --python-version 3."$currentVersion_minor" --only-binary=:all: --dest "$lib_dir_nix_python_wheels" > /dev/null >&2
-		"$1"pip download "$3" --platform win_arm64 --python-version 3."$currentVersion_minor" --only-binary=:all: --dest "$lib_dir_nix_python_wheels" > /dev/null >&2
+		"$1"pip download "$3" --platform linux_x86_64 --python-version 3."$currentVersion_minor" --only-binary=:all: --dest "$lib_dir_nix_python_wheels" > /dev/null >&2
+		"$1"pip download "$3" --platform manylinux2014_x86_64 --python-version 3."$currentVersion_minor" --only-binary=:all: --dest "$lib_dir_nix_python_wheels" > /dev/null >&2
+		"$1"pip download "$3" --platform manylinux1 --python-version 3."$currentVersion_minor" --only-binary=:all: --dest "$lib_dir_nix_python_wheels" > /dev/null >&2
+		"$1"pip download "$3" --platform any --python-version 3."$currentVersion_minor" --only-binary=:all: --dest "$lib_dir_nix_python_wheels" > /dev/null >&2
 	done
 }
 
