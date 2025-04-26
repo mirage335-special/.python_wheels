@@ -22,6 +22,7 @@ _get-specific_nix_python_wheels() {
 }
 
 _get_nix_python_wheels() {
+	_get-specific_nix_python_wheels "$1" "$2" setuptools
 	_get-specific_nix_python_wheels "$1" "$2" readline
 	_get-specific_nix_python_wheels "$1" "$2" colorama
 }
